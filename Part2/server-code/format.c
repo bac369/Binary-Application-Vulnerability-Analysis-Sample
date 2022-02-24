@@ -41,7 +41,7 @@ void myprintf(char *msg)
 #endif
 
     // This line has a format-string vulnerability
-    printf(msg);
+    printf("%s", msg);
 
 #if __x86_64__
     printf("The target variable's value (after):  0x%.16lx\n", target);
